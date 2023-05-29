@@ -1,0 +1,18 @@
+{
+    "authenticationMethod": "route",
+    "welcomeFile": "/index.html",
+    "routes": [
+      {
+        "source": "^(.*)/admin(.*)$",
+        "authenticationType": "none",
+        "target": "$2",
+        "destination": "downtimes"
+      },
+      {
+        "source": "^(.*)$",  
+        "target": "$1",  
+        "authenticationType": "xsuaa",  
+        "localDir": "webapp"  
+      }  
+    ]  
+  }

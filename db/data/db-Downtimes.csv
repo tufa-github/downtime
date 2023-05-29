@@ -1,0 +1,2 @@
+ID,title,description,type,system_ID,startsAt,endsAt,showFrom,showUntil
+36199e71-951e-452b-85f9-a201be94466e,Maintenance downtime,the first downtime,OneTime,da0f6289-39d2-4438-a439-61ac82b75099,2023-05-03T00:00:00.000Z,2023-06-07T00:00:00.000Z,2023-05-03T00:00:00.000Z,2023-06-02T00:00:00.000Z

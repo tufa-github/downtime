@@ -1,0 +1,44 @@
+GET http://localhost:4004/admin/Downtimes
+
+###
+POST http://localhost:4004/admin/Downtimes
+Content-Type: application/json
+
+{
+    "title": "system fifth downtime",
+    "description": "this is another system downtime",
+    "type": "OneTime",
+    "startsAt": "2023-05-03T00:00:00.000Z",
+    "endsAt": "2023-06-07T00:00:00.000Z",
+    "showFrom":"2023-05-03T00:00:00.000Z",
+    "showUntil": "2023-06-02T00:00:00.000Z",
+    "system_ID": "8651431f-7acb-4934-97ab-42e90ee531f1"
+}
+
+###
+POST http://localhost:4004/admin/Systems
+Content-Type: application/json
+
+{
+    "title": "third System",
+    "description": "The third System"
+}
+
+###
+GET  http://localhost:4004/public/Systems/058bb87c-95e5-4a49-8490-6388d6fc3a98/PublicService.getCurrentDowntimes()
+
+###
+ [{
+    "ID":"xxx",
+    "title":"my first dowmtime",
+    "description":"this is a downtime",
+    "type":"OneTime",
+    "startAt": "2023-05-05T00:00:00.000Z",
+    "endsAt": "2023-05-06T00:00:00.000Z",
+    "showFrom":"2023-05-03T00:00:00.000Z",
+    "showUntil": "2023-05-06T00:00:00.000Z",
+    "isDown": true
+}]
+
+
+

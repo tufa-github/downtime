@@ -1,0 +1,44 @@
+<mvc:View
+	controllerName="com.myorg.downtimes.controller.Main"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<Page title="Downtimes">
+
+		<content>
+			<Table id="downtimesList" mode="Delete" delete="onDeletePress" growing="true" growingThreshold="20" items="{/Downtimes}" >
+				<headerToolbar>
+					<OverflowToolbar width="100%">
+						<Title text="Downtimes List"></Title>
+						<ToolbarSpacer ></ToolbarSpacer>
+						<Button text="Create New Downtime" icon="sap-icon://add" press="pressAddInList"></Button>
+						<Button text="Create New System" icon="sap-icon://add" press="pressAddInSystemList"></Button>
+						<SearchField width="300px" placeholder="Search downtimes" search="mySearchDowntimes"></SearchField>
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column >
+						<Text text="Title"></Text>
+					</Column>
+					<Column >
+						<Text text="System"></Text>
+					</Column>
+					<Column >
+						<Text text="Type"></Text>
+					</Column>
+				</columns>
+
+				<items>
+					<ColumnListItem type="Active" press="onItemPress">
+						<Text text="{title}"></Text>
+						<Text text="{system/title}"></Text>
+						<Text text="{type}"></Text>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</content>
+
+	</Page>
+
+</mvc:View>

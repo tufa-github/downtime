@@ -1,0 +1,15 @@
+{
+  "generator-ui5-ts-app": {
+    "application": "downtimes",
+    "namespace": "com.myorg",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.113.0",
+    "author": "fangfang",
+    "initrepo": false,
+    "tstypes": "@sapui5/types",
+    "tstypesVersion": "1.113.0",
+    "appId": "com.myorg.downtimes",
+    "appURI": "com/myorg/downtimes",
+    "setupCompleted": true
+  }
+}

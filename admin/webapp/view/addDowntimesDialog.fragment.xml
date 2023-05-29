@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="myDowntimesView" title="" class="sapUiResponsivePadding--header sapUiResponsivePadding--footer" initialFocus="email">
+        <content>
+            <VBox class="sapUiMediumMargin">
+                <Label text="Title" />
+                <Input value="{listInputModel>/recipient/title}" width="400px" />
+                <Label text="Description" />
+                <Input value="{listInputModel>/recipient/description}" width="400px" />
+                <Label text="System" />
+                <Input value="{listInputModel>/recipient/system/title}" width="400px" />
+                <Label text="Type" />
+                <Input value="{listInputModel>/recipient/type}" showValueHelp="true" valueHelpRequest="handelTypeValueHelp" width="400px" />
+                <Label text="Starts At" />
+                <DateTimePicker value="{listInputModel>/recipient/startsAt}" width="400px" />
+                <Label text="Ends At" />
+                <DateTimePicker value="{listInputModel>/recipient/endsAt}" width="400px" />
+                <Label text="Show From" />
+                <DateTimePicker value="{listInputModel>/recipient/showFrom}" width="400px" />
+                <Label text="Show Until" />
+                <DateTimePicker value="{listInputModel>/recipient/showUntil}" width="400px" />
+            </VBox>
+        </content>
+        <beginButton>
+            <Button text="Cancel" ariaHasPopup="Dialog" press="closeDialog" />
+        </beginButton>
+        <endButton>
+            <Button text="Add" ariaHasPopup="Dialog" press="dialogAddInDowntimesList" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

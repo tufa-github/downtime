@@ -1,0 +1,35 @@
+{
+  "name": "CAP",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6",
+    "express": "^4",
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.2",
+    "sqlite3": "^5.1.6",
+    "ui5-middleware-simpleproxy": "^0.9.7"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-cap_project": "cds watch --open cap_project/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db.sqlite"
+        }
+      }
+    }
+  },
+  "sapux": [
+    "app/cap_project"
+  ]
+}
